@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <title>BellyBudget</title>
+</head>
+<body>
+  <p th:text="${greeting}"/>
+  <form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+  </form>
+</body>
+</html>
