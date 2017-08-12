@@ -1,0 +1,117 @@
+/*
+ * Color theme
+ */
+
+.color-primary {
+    color: #ffc107;
+}
+
+.color-primary-light {
+    color: #fff350;
+}
+
+.color-primary-dark {
+    color: #c79100;
+}
+
+.bgc-primary {
+    background-color: #ffc107;
+}
+
+.bgc-primary-light {
+    background-color: #fff350;
+}
+
+.bgc-primary-dark {
+    background-color: #c79100;
+}
+
+.color-secondary {
+    color: #388e3c;
+}
+
+.color-secondary-light {
+    color: #6abf69;
+}
+
+.color-secondary-dark {
+    color: #00600f;
+}
+
+.bgc-secondary {
+    background-color: #388e3c;
+}
+
+.bgc-secondary-light {
+    background-color: #6abf69;
+}
+
+.bgc-secondary-dark {
+    background-color: #00600f;
+}
+
+/*
+ * Main layout
+ */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+a.navbar-brand {
+    font-size: 1.6em;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+}
+
+/*
+ * Login form
+ */
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+.form-signin .checkbox {
+    font-weight: normal;
+}
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}

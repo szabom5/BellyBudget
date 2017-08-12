@@ -27,7 +27,7 @@ public class GreetingController {
       Model model,
       @AuthenticationPrincipal User user) {
     model.addAttribute("greeting", greetingService.greet(user.getUsername()));
-    return "greeting";
+    return "page/greeting";
   }
 
 }
