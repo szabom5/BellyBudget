@@ -1,16 +1,17 @@
 <header xmlns:th="http://www.thymeleaf.org"
         xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
         th:fragment="header">
-  <nav class="navbar sticky-top navbar-expand-lg navbar-light bgc-primary">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-primary">
     <div class="container">
-      <a class="navbar-brand" href="/">BellyBudget</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse"
-              data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+              data-target="#navbarNavLeft"
+              aria-controls="navbarNavLeft"
               aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <a class="navbar-brand" href="/">BellyBudget</a>
 
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="collapse navbar-collapse" id="navbarNavLeft">
         <div class="navbar-nav">
           <a class="nav-item nav-link" th:href="@{/}" href="/">
             Home <span class="sr-only">(current)</span>
@@ -21,24 +22,18 @@
         </div>
       </div>
 
-      <ul sec:authorize="not(isAuthenticated())" class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" th:href="@{/login}" href="/login">
-            Login
-          </a>
-        </li>
-      </ul>
+      <div class="" id="navbarNavRight">
+        <div sec:authorize="not(isAuthenticated())" class="navbar-nav">
+          <a class="nav-item nav-link" th:href="@{/login}" href="/login">Login</a>
+        </div>
 
-      <form sec:authorize="isAuthenticated()" th:action="@{/logout}" id="logout-form" method="post">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#profile">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" onclick="$('#logout-form').submit();" href="#">Logout</a>
-          </li>
-        </ul>
-      </form>
+        <form sec:authorize="isAuthenticated()" th:action="@{/logout}" id="logout-form"
+              method="post">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" onclick="$('#logout-form').submit();" href="#">Logout</a>
+          </div>
+        </form>
+      </div>
 
     </div>
   </nav>
